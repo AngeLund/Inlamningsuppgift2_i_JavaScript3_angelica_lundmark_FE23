@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Cell from './Components/Cell';
+import createBoard from './utils/utils.js';
 
 function App() {
+  const se = {
+    index: 0,
+    hasMine: false,
+    numberOfNeighbouringMines: 0,
+    visible: false}
+  const board = createBoard(25,10);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+     {board.map((cellobject) => <Cell cell={cellobject}/> )}
     </div>
   );
 }
