@@ -8,7 +8,7 @@
 }
 
 .box {
-  background-color: rgb(191, 112, 112);
+  background-color: #bebebe;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -22,10 +22,9 @@
   grid-gap: 10px;
   grid-template-columns: repeat(5, 100px);
   grid-template-rows: repeat(5, 100px);
-  grid-auto-flow: column;
+  margin: auto;
+  margin-top: 40px;
 }
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -55,7 +54,4 @@
   to {
     transform: rotate(360deg);
   }
-
-
-
 }

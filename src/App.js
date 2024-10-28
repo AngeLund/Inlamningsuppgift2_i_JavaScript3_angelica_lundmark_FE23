@@ -1,22 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import Cell from './Components/Cell';
-import createBoard from './utils/utils.js';
+import "./App.css";
+import Board from "./Components/Board.jsx";
 
 function App() {
-  const se = {
-    index: 0,
-    hasMine: false,
-    numberOfNeighbouringMines: 0,
-    visible: false}
-  const board = createBoard(25,10);
-
-
-  return (
-    <div className="wrapper">
-     {board.map((cellobject) => <Cell cell={cellobject}/> )}
-    </div>
-  );
+  return <Board boardSize={25} numberOfMines={7} />;
 }
 
 export default App;
